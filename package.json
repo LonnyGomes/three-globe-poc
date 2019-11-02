@@ -13,5 +13,8 @@
     "three": "^0.110.0",
     "three-globe": "^2.2.2",
     "three-trackballcontrols": "0.0.8"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
   }
 }
