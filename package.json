@@ -10,6 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "three": "^0.110.0"
+    "three": "^0.110.0",
+    "three-globe": "^2.2.2",
+    "three-trackballcontrols": "0.0.8"
   }
 }
