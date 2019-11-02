@@ -2,12 +2,22 @@ import * as THREE from 'three';
 import ThreeGlobe from 'three-globe';
 import TrackballControls from 'three-trackballcontrols';
 
-const N = 300;
+const N = 30;
+const MAX_LON = 39.550781;
+const MIN_LON = -10.722656;
+const LON_DIFF = Math.abs(MAX_LON - MIN_LON);
+const MAX_LAT = 64.320872;
+const MIN_LAT = 34.885931;
+const LAT_DIFF = Math.abs(MAX_LAT - MIN_LAT);
+
+console.log(`LON_DIFF: ${LON_DIFF}`, LON_DIFF);
+console.log('LAT_DIFF:', LAT_DIFF);
+
 const gData = [...Array(N).keys()].map(() => ({
-    lat: (Math.random() - 0.5) * 180,
-    lng: (Math.random() - 0.5) * 360,
-    size: Math.random() / 3,
-    color: ['red', 'white', 'blue', 'green'][Math.round(Math.random() * 3)]
+    lat: MIN_LAT + Math.random() * LAT_DIFF,
+    lng: MIN_LON + Math.random() * LON_DIFF,
+    size: Math.random(),
+    color: ['#931111', '#808080', '#e3e3e3'][Math.round(Math.random() * 2)]
 }));
 
 const Globe = new ThreeGlobe()
@@ -19,7 +29,7 @@ const Globe = new ThreeGlobe()
 
 setInterval(
     () => {
-        gData.forEach(d => (d.size = Math.random()));
+        gData.forEach(d => (d.size = Math.random()) / 3);
         Globe.pointsData(gData);
     },
     4000,
