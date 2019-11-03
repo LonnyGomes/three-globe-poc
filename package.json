@@ -4,12 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "parcel index.html"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "three": "^0.110.0"
+    "three": "^0.110.0",
+    "three-globe": "^2.2.2",
+    "three-trackballcontrols": "0.0.8"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
   }
 }
