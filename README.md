@@ -2,7 +2,7 @@
 
 Experiments with the [three-globe](https://github.com/vasturiano/three-globe) library to display data on a globe using three.js.
 
-![screen shot](screenshot.png)
+[](![screen shot](screenshot.png))
 
 ## Usage
 
